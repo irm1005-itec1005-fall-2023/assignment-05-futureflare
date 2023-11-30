@@ -12,6 +12,9 @@
 
 **Assessment**: This assignment is worth 15% of your final grade and marked out of 100.
 
+## Group Project Description
+An E-commerce website with a product display using multiple windows
+
 ## TLDR
 
 1. Sketch a concept that the team is going to build (landing page or web app or game)
