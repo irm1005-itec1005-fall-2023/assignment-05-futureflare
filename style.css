@@ -82,7 +82,7 @@ body {
   display: grid;
   margin-top: 10px;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
 
   align-items: start;
@@ -143,7 +143,7 @@ body {
   background-color: #ffffffcd;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 7px;
+  border-radius: 10px;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
