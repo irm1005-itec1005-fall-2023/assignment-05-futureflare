@@ -37,12 +37,6 @@ document.getElementById('submitOrder').addEventListener('click', function () {
     return;
   }
 
-  const addons = document.querySelectorAll('.submenu input[type="checkbox"]:checked');
-  if (addons.length === 0) {
-    alert('Please select at least one addon for your coffee.');
-    return;
-  }
-
   const orderNumber = generateOrderNumber();
   const orderMessage = `Thank you for your order! Your order number is: ${orderNumber}`;
 
