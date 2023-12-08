@@ -65,12 +65,10 @@
             </div>
             <div class="submenu" id="espressoMenu">
               <div>
-                <input type="checkbox" id="extraMilkEspresso" name="extraMilk" value="0.50" onchange="updatePrice()">
-                <label for="extraMilkEspresso">Extra Milk - $0.50</label>
+                <input type="checkbox" id="extraMilkEspresso" name="extraMilk" value="0.50" data-coffee="espresso" onchange="updatePrice()">                <label for="extraMilkEspresso">Extra Milk - $0.50</label> 
               </div>
               <div>
-                <input type="checkbox" id="sugarEspresso" name="sugar" value="0.25" onchange="updatePrice()">
-                <label for="sugarEspresso">Sugar - $0.25</label>
+                <input type="checkbox" id="sugarEspresso" name="sugar" value="0.25" data-coffee="espresso" onchange="updatePrice()">                <label for="sugarEspresso">Sugar - $0.25</label>
               </div>
             </div>
           </div>
@@ -82,11 +80,11 @@
             </div>
             <div class="submenu" id="latteMenu">
               <div>
-                <input type="checkbox" id="extraMilkLatte" name="extraMilk" value="0.50" onchange="updatePrice()">
+                <input type="checkbox" id="extraMilkLatte" name="extraMilk" value="0.50" data-coffee="latte" onchange="updatePrice()">
                 <label for="extraMilkLatte">Extra Milk - $0.50</label>
               </div>
               <div>
-                <input type="checkbox" id="sugarLatte" name="sugar" value="0.25" onchange="updatePrice()">
+                <input type="checkbox" id="sugarLatte" name="sugar" value="0.25" data-coffee="latte" onchange="updatePrice()">
                 <label for="sugarLatte">Sugar - $0.25</label>
               </div>
             </div>

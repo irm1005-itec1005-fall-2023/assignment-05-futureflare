@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   coffeeCheckboxes.forEach(function (checkbox) {
     checkbox.addEventListener('change', function () {
-      var submenu = this.parentNode.parentNode.querySelector('.submenu');
-      submenu.style.display = this.checked ? 'block' : 'none';
+      var submenu = this.parentNode.nextElementSibling;
+      if (submenu && submenu.classList.contains('submenu')) {
+        submenu.style.display = this.checked ? 'block' : 'none';
+      }
       updatePrice();
     });
   });
@@ -22,6 +24,14 @@ function updatePrice() {
 
   coffeeOptions.forEach(function (option) {
     if (option.checked) {
+      if (option.dataset.coffee) {
+        var relatedCoffee = document.getElementById(option.dataset.coffee);
+        if (!relatedCoffee.checked) {
+          alert('Please select the related coffee option before choosing addons.');
+          option.checked = false;
+          return;
+        }
+      }
       total += parseFloat(option.value);
     }
   });
@@ -31,11 +41,6 @@ function updatePrice() {
 
 document.getElementById('submitOrder').addEventListener('click', function () {
   const coffeeOptions = document.querySelectorAll('.coffee-option input[type="checkbox"]:checked');
-
-  if (coffeeOptions.length === 0) {
-    alert('Please select a coffee option before placing the order.');
-    return;
-  }
 
   const orderNumber = generateOrderNumber();
   const orderMessage = `Thank you for your order! Your order number is: ${orderNumber}`;
