@@ -81,7 +81,7 @@ body {
 #coffeeForm {
   display: grid;
   margin-top: 10px;
-  grid-template-rows: 1fr 100%;
+  grid-template-rows: 1fr 70%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
   
@@ -116,7 +116,6 @@ body {
   padding: 0px;
   margin-bottom: 15px;
   border-radius: 5px;
-  
   position: relative;
   transition: transform 0.3s ease;
 }
@@ -140,7 +139,7 @@ body {
   border-radius: 10px;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: transform 0.3s ease;
 }
