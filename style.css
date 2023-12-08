@@ -86,7 +86,7 @@ body {
   column-gap: 30px;
 
   align-items: center;
-  justify-items: stretch;
+  justify-items: center;
   
   /* border: 1px solid black; */ /* Used as visual representation of grid loyout*/
 }
@@ -112,7 +112,6 @@ body {
 #priceOrder {
   grid-column: 1;
   grid-row: 2;
-
   
   justify-self: start;
 }
