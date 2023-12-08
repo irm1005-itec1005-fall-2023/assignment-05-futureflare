@@ -85,7 +85,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
 
-  align-items: center;
+  align-items: start;
   justify-items: center;
   
   /* border: 1px solid black; */ /* Used as visual representation of grid loyout*/
@@ -114,6 +114,7 @@ body {
   grid-row: 2;
   
   justify-self: start;
+  align-self: center;
 }
 
 
