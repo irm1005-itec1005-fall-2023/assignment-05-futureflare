@@ -25,6 +25,8 @@
 
   <!-- Citation -->
   <!-- Hero Image: https://unsplash.com/photos/three-person-holding-beverage-cups-6VhPY27jdps -->
+  <!-- Espresso Image: https://unsplash.com/photos/white-ceramic-coffee-mug-with-capuccino-6cY1xBGn9ZI -->
+  <!-- Latte Image: https://www.pexels.com/photo/shallow-focus-photography-of-cafe-late-982612/ -->
 </head>
 
 <body>
@@ -81,25 +83,31 @@
                   onchange="updatePrice()"> <label for="sugarEspresso">Sugar - $0.25</label>
               </div>
             </div>
-        </div>
-
-        </div>
-
-        <div class="coffee-option">
-          <div class="coffee-title">
-            <input type="checkbox" id="latte" name="coffee" value="3.50" onchange="updatePrice()">
-            <label for="latte">Latte - $3.50</label>
           </div>
-          <div class="submenu" id="latteMenu">
-            <div>
-              <input type="checkbox" id="extraMilkLatte" name="extraMilk" value="0.50" data-coffee="latte"
-                onchange="updatePrice()">
-              <label for="extraMilkLatte">Extra Milk - $0.50</label>
+        </div>
+
+        <div class="coffee-choice">
+
+          <div>
+            <img class="coffee-img" src="./images/lattecoffee.jpg" alt="Cup of Latte">
+          </div>
+          
+          <div class="coffee-option">
+            <div class="coffee-title">
+              <input type="checkbox" id="latte" name="coffee" value="3.50" onchange="updatePrice()">
+              <label for="latte">Latte - $3.50</label>
             </div>
-            <div>
-              <input type="checkbox" id="sugarLatte" name="sugar" value="0.25" data-coffee="latte"
-                onchange="updatePrice()">
-              <label for="sugarLatte">Sugar - $0.25</label>
+            <div class="submenu" id="latteMenu">
+              <div>
+                <input type="checkbox" id="extraMilkLatte" name="extraMilk" value="0.50" data-coffee="latte"
+                  onchange="updatePrice()">
+                <label for="extraMilkLatte">Extra Milk - $0.50</label>
+              </div>
+              <div>
+                <input type="checkbox" id="sugarLatte" name="sugar" value="0.25" data-coffee="latte"
+                  onchange="updatePrice()">
+                <label for="sugarLatte">Sugar - $0.25</label>
+              </div>
             </div>
           </div>
         </div>
