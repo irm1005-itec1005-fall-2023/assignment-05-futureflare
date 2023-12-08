@@ -42,6 +42,11 @@ function updatePrice() {
 document.getElementById('submitOrder').addEventListener('click', function () {
   const coffeeOptions = document.querySelectorAll('.coffee-option input[type="checkbox"]:checked');
 
+  if (coffeeOptions.length === 0) {
+    alert('Please select at least one coffee option before submitting your order.');
+    return;
+  }
+
   const orderNumber = generateOrderNumber();
   const orderMessage = `Thank you for your order! Your order number is: ${orderNumber}`;
 
