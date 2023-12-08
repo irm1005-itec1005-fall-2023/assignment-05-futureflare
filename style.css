@@ -84,7 +84,6 @@ body {
   grid-template-rows: 1fr 70%;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
-
   justify-items: center;
   align-items: start;
 }
@@ -111,7 +110,6 @@ body {
   justify-self: start;
   align-self: start;
 }
-
 
 .coffee-choice {
   padding: 0px;
@@ -151,7 +149,6 @@ body {
 }
 */
 
-
 .submenu {
   display: none;
   background-color: #f9f9f9dd;
@@ -171,7 +168,6 @@ body {
     opacity: 1;
   }
 }
-
 
 .total-price {
   text-align: center;
