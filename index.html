@@ -30,14 +30,6 @@
 </head>
 
 <body>
-  <!--
-
-      ADD YOUR GROUP PROJECT CODE
-
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
-
-    -->
-
   <header>
     <nav class="navbar">
       <div class="logo">Coffee Heaven</div>
@@ -62,8 +54,7 @@
     <section class="coffee-selection">
       <h2>Customize Your Coffee</h2>
       <form id="coffeeForm">
-
-        <div class="coffee-choice">
+        <div class="coffee-choice" id="espressoChoice">
           <div>
             <img class="coffee-img" id="espresso-img" src="./images/espressocoffe2.jpg" alt="image of espresso shot">
           </div>
@@ -85,8 +76,7 @@
             </div>
           </div>
         </div>
-
-        <div class="coffee-choice">
+        <div class="coffee-choice" id="latteChoice">
 
           <div>
             <img class="coffee-img" src="./images/lattecoffee.jpg" alt="Cup of Latte">
@@ -110,16 +100,15 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="total-price">
+        </div>   
+        
+        <div class="total-price" id="priceOrder">
           <p>Total: <span id="totalPrice">$0.00</span></p>
           <button type="button" id="submitOrder">Order Now</button>
         </div>
       </form>
     </section> 
   
-
     <section id="orderDetails" class="order-details">
       <h2>Order Details</h2>
       <p id="orderMessage"></p>
