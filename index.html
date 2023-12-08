@@ -60,21 +60,29 @@
     <section class="coffee-selection">
       <h2>Customize Your Coffee</h2>
       <form id="coffeeForm">
-        <div class="coffee-option">
-          <div class="coffee-title">
-            <input type="checkbox" id="espresso" name="coffee" value="2.00" onchange="updatePrice()">
-            <label for="espresso">Espresso - $2.00</label>
+
+        <div class="coffee-choice">
+          <div>
+            <img class="coffee-img" id="espresso-img" src="./images/espressocoffe2.jpg" alt="image of espresso shot">
           </div>
-          <div class="submenu" id="espressoMenu">
-            <div>
-              <input type="checkbox" id="extraMilkEspresso" name="extraMilk" value="0.50" data-coffee="espresso"
-                onchange="updatePrice()"> <label for="extraMilkEspresso">Extra Milk - $0.50</label>
+          
+          <div class="coffee-option">
+            <div class="coffee-title">
+              <input type="checkbox" id="espresso" name="coffee" value="2.00" onchange="updatePrice()">
+              <label for="espresso">Espresso - $2.00</label>
             </div>
-            <div>
-              <input type="checkbox" id="sugarEspresso" name="sugar" value="0.25" data-coffee="espresso"
-                onchange="updatePrice()"> <label for="sugarEspresso">Sugar - $0.25</label>
+            <div class="submenu" id="espressoMenu">
+              <div>
+                <input type="checkbox" id="extraMilkEspresso" name="extraMilk" value="0.50" data-coffee="espresso"
+                  onchange="updatePrice()"> <label for="extraMilkEspresso">Extra Milk - $0.50</label>
+              </div>
+              <div>
+                <input type="checkbox" id="sugarEspresso" name="sugar" value="0.25" data-coffee="espresso"
+                  onchange="updatePrice()"> <label for="sugarEspresso">Sugar - $0.25</label>
+              </div>
             </div>
-          </div>
+        </div>
+
         </div>
 
         <div class="coffee-option">

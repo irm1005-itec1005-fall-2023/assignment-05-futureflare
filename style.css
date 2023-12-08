@@ -76,6 +76,26 @@ body {
   margin: 20px auto;
 }
 
+.coffee-choice {
+  padding: 0px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.coffee-choice:hover {
+  transform: scale(1.02);
+}
+
+.coffee-img {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
 .coffee-option {
   background-color: #fff;
   padding: 10px;
@@ -86,9 +106,15 @@ body {
   transition: transform 0.3s ease;
 }
 
+/*
 .coffee-option:hover {
   transform: scale(1.03);
 }
+*/
+
+
+
+
 
 .submenu {
   display: none;
