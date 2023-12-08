@@ -72,27 +72,88 @@ body {
 }
 
 .coffee-selection {
-  width: 80%;
+  display: flex;
+  width: 85%;
+  flex-direction: column;
   margin: 20px auto;
 }
 
+#coffeeForm {
+  display: grid;
+  margin-top: 10px;
+  grid-template-rows: 1fr 70%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  
+  justify-items: center;
+  align-items: start;
+  
+  /* border: 1px solid black; */ /* Used as visual representation of grid loyout*/
+}
+
+#espressoCoffee {
+  grid-column: 1;
+  grid-row: 2; 
+}
+
+#latteCoffee {
+  grid-column: 2;
+  grid-row: 2;
+
+
+}
+
+#priceOrder {
+  grid-column: 1 / 4;
+  grid-row: 2;
+  
+  justify-self: start;
+  align-self: start;
+}
+
+
+.coffee-choice {
+  padding: 0px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.coffee-choice:hover {
+  transform: scale(1.03);
+}
+
+.coffee-img {
+  object-fit: cover;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+}
+
 .coffee-option {
-  background-color: #fff;
+  background-color: #ffffffcd;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: transform 0.3s ease;
 }
 
+/*
 .coffee-option:hover {
   transform: scale(1.03);
 }
+*/
+
 
 .submenu {
   display: none;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9dd;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 5px;
