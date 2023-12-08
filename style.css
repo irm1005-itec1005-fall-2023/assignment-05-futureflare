@@ -81,20 +81,14 @@ body {
 #coffeeForm {
   display: grid;
   margin-top: 10px;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
-
-  align-items: start;
+  
   justify-items: center;
+  align-items: start;
   
   /* border: 1px solid black; */ /* Used as visual representation of grid loyout*/
-}
-
-#custumCoffee {
-  grid-column: 1;
-  grid-row: 1;
-  
 }
 
 #espressoCoffee {
@@ -110,11 +104,11 @@ body {
 }
 
 #priceOrder {
-  grid-column: 1;
+  grid-column: 1 / 4;
   grid-row: 2;
   
   justify-self: start;
-  align-self: center;
+  align-self: start;
 }
 
 
