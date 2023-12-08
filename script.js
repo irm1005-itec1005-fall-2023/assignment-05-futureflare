@@ -3,80 +3,65 @@
 //  YOU CAN REMOVE ALL OF THIS CODE AND START FRESH
 //
 
-//
-// Variables
-//
 
-// Constants
-const appID = "app";
-const headingText = "Develop. Preview. Ship.";
-const headingTextIcon = "🚀";
-const projectDueDate = "8 December 2023 11:59";
+document.addEventListener("DOMContentLoaded", function () {
+  var coffeeCheckboxes = document.querySelectorAll('.coffee-option input[type="checkbox"]');
 
-// Variables
-let countdownDate = new Date(projectDueDate);
+  coffeeCheckboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
+      var submenu = this.parentNode.parentNode.querySelector('.submenu');
+      submenu.style.display = this.checked ? 'block' : 'none';
+      updatePrice();
+    });
+  });
+});
 
-// DOM Elements
-let appContainer = document.getElementById(appID);
+function updatePrice() {
+  var coffeeOptions = document.querySelectorAll('#coffeeForm input[type=checkbox]');
+  var total = 0;
 
-//
-// Functions
-//
+  coffeeOptions.forEach(function (option) {
+    if (option.checked) {
+      total += parseFloat(option.value);
+    }
+  });
 
-function calculateDaysLeft(countdownDate) {
-  const now = new Date().getTime();
-  const countdown = new Date(countdownDate).getTime();
-
-  console.log(countdown);
-
-  const difference = (countdown - now) / 1000;
-
-
-  // Countdown passed already
-  if (difference < 1) {
-    return null;
-  }
-
-
-  const days = Math.floor(difference / (60 * 60 * 24));
-
-  return days;
+  document.getElementById('totalPrice').innerText = `$${total.toFixed(2)}`;
 }
 
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
+document.getElementById('submitOrder').addEventListener('click', function () {
+  const coffeeOptions = document.querySelectorAll('.coffee-option input[type="checkbox"]:checked');
+
+  if (coffeeOptions.length === 0) {
+    alert('Please select a coffee option before placing the order.');
     return;
   }
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  const daysLeft = calculateDaysLeft(countdownDate);
-  let headingTextCalculated = headingText;
-
-  if (daysLeft > 1) {
-    headingTextCalculated = headingTextCalculated.concat(
-      " In ",
-      daysLeft.toString(),
-      " days "
-    );
-  }else if (daysLeft === 1) {
-    headingTextCalculated = headingTextCalculated.concat(
-      " Tomorrow"
-    );
+  const addons = document.querySelectorAll('.submenu input[type="checkbox"]:checked');
+  if (addons.length === 0) {
+    alert('Please select at least one addon for your coffee.');
+    return;
   }
 
-  h1.textContent = headingTextCalculated.concat(headingTextIcon);
-  appContainer.appendChild(h1);
+  const orderNumber = generateOrderNumber();
+  const orderMessage = `Thank you for your order! Your order number is: ${orderNumber}`;
 
-  // Init complete
-  console.log("App successfully initialised");
+  appendOrderDetails(orderMessage);
+  displayOrderDetails();
+});
+
+function generateOrderNumber() {
+  const timestamp = new Date().getTime();
+  return timestamp;
 }
 
-//
-// Inits & Event Listeners
-//
+function appendOrderDetails(message) {
+  const orderDetailsSection = document.getElementById('orderDetails');
+  const newOrderElement = document.createElement('p');
+  newOrderElement.innerText = message;
+  orderDetailsSection.appendChild(newOrderElement);
+}
 
-inititialise();
+function displayOrderDetails() {
+  document.getElementById('orderDetails').style.display = 'block';
+}
