@@ -80,37 +80,44 @@ body {
 
 #coffeeForm {
   display: grid;
+<<<<<<< HEAD
   margin-top: 10px;
   grid-template-rows: 1fr 70%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 40px;
   
+=======
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+>>>>>>> 7b3570f0e2826c3220e3646b6dbb7ba7a96a026a
   justify-items: center;
   align-items: start;
-  
-  /* border: 1px solid black; */ /* Used as visual representation of grid loyout*/
+  margin-top: 10px;
 }
 
-#espressoCoffee {
+#espressoChoice {
   grid-column: 1;
-  grid-row: 2; 
+  grid-row: 2;
 }
 
-#latteCoffee {
+#latteChoice {
   grid-column: 2;
   grid-row: 2;
+}
 
-
+#americanoChoice {
+  grid-column: 3;
+  grid-row: 2;
 }
 
 #priceOrder {
   grid-column: 1 / 4;
   grid-row: 2;
-  
+
   justify-self: start;
   align-self: start;
 }
-
 
 .coffee-choice {
   padding: 0px;
@@ -119,6 +126,7 @@ body {
   position: relative;
   transition: transform 0.3s ease;
 }
+
 .coffee-choice:hover {
   transform: scale(1.03);
 }
@@ -129,7 +137,6 @@ body {
   border-radius: 10px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-
 }
 
 .coffee-option {
@@ -149,7 +156,6 @@ body {
   transform: scale(1.03);
 }
 */
-
 
 .submenu {
   display: none;
@@ -171,17 +177,20 @@ body {
   }
 }
 
-
 .total-price {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 1.2rem;
-  color: #6d4c41;
+  color: #6d4c41; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .total-price p {
   margin: 10px 0;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.9);
   display: inline-block;
   border-radius: 8px;
@@ -206,7 +215,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.total-price button#submitOrder:hover{
+.total-price button#submitOrder:hover {
   background-color: #543930;
   transform: translateY(-2px);
 }

@@ -58,7 +58,6 @@
           <div>
             <img class="coffee-img" id="espresso-img" src="./images/espressocoffe2.jpg" alt="image of espresso shot">
           </div>
-          
           <div class="coffee-option">
             <div class="coffee-title">
               <input type="checkbox" id="espresso" name="coffee" value="2.00" onchange="updatePrice()">
@@ -76,13 +75,11 @@
             </div>
           </div>
         </div>
-        
-        <div class="coffee-choice" id="latteChoice">
 
+        <div class="coffee-choice" id="latteChoice">
           <div>
             <img class="coffee-img" src="./images/lattecoffee.jpg" alt="Cup of Latte">
           </div>
-          
           <div class="coffee-option">
             <div class="coffee-title">
               <input type="checkbox" id="latte" name="coffee" value="3.50" onchange="updatePrice()">
@@ -101,15 +98,41 @@
               </div>
             </div>
           </div>
-        </div>   
-        
-        <div class="total-price" id="priceOrder">
-          <p>Total: <span id="totalPrice">$0.00</span></p>
-          <button type="button" id="submitOrder">Order Now</button>
+        </div>
+
+        <div class="coffee-choice" id="americanoChoice">
+          <div>
+            <img class="coffee-img" src="./images/americano.jpg" alt="Cup of Americano">
+          </div>
+          <div class="coffee-option">
+            <div class="coffee-title">
+              <input type="checkbox" id="americano" name="coffee" value="3.50" onchange="updatePrice()">
+              <label for="americano">Americano - $3.50</label>
+            </div>
+            <div class="submenu" id="americanoMenu">
+              <div>
+                <input type="checkbox" id="extraMilkAmericano" name="extraMilk" value="0.50" data-coffee="americano"
+                  onchange="updatePrice()">
+                <label for="extraMilkAmericano">Extra Milk - $0.50</label>
+              </div>
+              <div>
+                <input type="checkbox" id="sugarAmericano" name="sugar" value="0.25" data-coffee="americano"
+                  onchange="updatePrice()">
+                <label for="sugarAmericano">Sugar - $0.25</label>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
-    </section> 
-  
+    </section>
+
+    <section>
+      <div class="total-price" id="priceOrder">
+        <p>Total: <span id="totalPrice">$0.00</span></p>
+        <button type="button" id="submitOrder">Order Now</button>
+      </div>
+    </section>
+
     <section id="orderDetails" class="order-details">
       <h2>Order Details</h2>
       <p id="orderMessage"></p>
