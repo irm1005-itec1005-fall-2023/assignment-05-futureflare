@@ -80,17 +80,9 @@ body {
 
 #coffeeForm {
   display: grid;
-<<<<<<< HEAD
-  margin-top: 10px;
-  grid-template-rows: 1fr 70%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 40px;
-  
-=======
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
->>>>>>> 7b3570f0e2826c3220e3646b6dbb7ba7a96a026a
   justify-items: center;
   align-items: start;
   margin-top: 10px;
