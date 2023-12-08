@@ -145,8 +145,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.total-price button#submitOrder:hover,
-.total-price button#submitOrder:focus {
+.total-price button#submitOrder:hover{
   background-color: #543930;
   transform: translateY(-2px);
 }
