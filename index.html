@@ -126,6 +126,33 @@
       </form>
     </section>
 
+    <section class="food-selection">
+      <h2>Food</h2>
+      <form id="danishForm">
+        <div class="danish-choice" id="danishChoice">
+          <div>
+            <img class="food-img" id="danish-img" src="https://static01.nyt.com/images/2015/12/23/dining/23JPDANISH4/23JPDANISH4-articleLarge.jpg" alt="image of 4 danishes">
+          </div>
+          <div class="danish-option">
+            <div class="danish-title">
+              <input type="checkbox" id="danish" name="coffee" value="4.00" onchange="updatePrice()">
+              <label for="espresso">Danish - $4.00</label>
+            </div>
+            <div class="submenu" id="danishMenu">
+              <div>
+                <div class="submenu" id="danishMenu">
+                  <div>
+                    <input type="checkbox" id="raspberryDanish" name="raspberrydanish" value="4.00" data-coffee="raspberry"
+                      onchange="updatePrice()"> <label for="Raspberrydanish">Raspberry</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="chocolateDanish" name="chocolatedanish" value="4.00" data-coffee="chocolate"
+                      onchange="updatePrice()"> <label for="Chocolatedanish">Chocolate</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
     <section>
       <div class="total-price" id="priceOrder">
         <p>Total: <span id="totalPrice">$0.00</span></p>
@@ -137,6 +164,30 @@
       <h2>Order Details</h2>
       <p id="orderMessage"></p>
     </section>
+
+    <section class="shop-story">
+      <div class="shop-story-content">
+        <h3>Our Story</h3>
+        <p>At Coffee Heaven, our story began with a shared love for exceptional coffee and a dream of creating a cozy, welcoming space for our community.
+          From carefully sourced beans to skilled baristas, Coffee Heaven is a labor of love, where each cup tells a tale of craftsmanship and connection.
+          Join us in savoring not just coffee, but the moments that make life rich and vibrant.</p>
+      </div>
+    </section>
+
+  <section>
+      <div class="customer-reviews-title">
+          <h3>Customer Reviews</h3>
+      </div>
+      <div class="customer-reviews">
+          <p>"I've searched high and low for the perfect espresso, and I found it at Coffee Heaven. The richness and depth of flavor are unmatched"</p>
+      </div>
+      <div class="customer-reviews">
+          <p>"Aside from their fantastic coffee, Coffee Heaven offers the most delicious pastries and treats!"</p>
+      </div>
+      <div class="customer-reviews">
+            <p>"Whether it's a classic drip or a specialty blend, they nail it every time. Highly recommended!"</p>
+  </section>
+
   </main>
 
   <footer>
