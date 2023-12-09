@@ -126,6 +126,33 @@
       </form>
     </section>
 
+    <section class="food-selection">
+      <h2>Food</h2>
+      <form id="danishForm">
+        <div class="danish-choice" id="danishChoice">
+          <div>
+            <img class="danish-img" id="espresso-img" src="https://static01.nyt.com/images/2015/12/23/dining/23JPDANISH4/23JPDANISH4-articleLarge.jpg" alt="image of 4 danishes">
+          </div>
+          <div class="danish-option">
+            <div class="danish-title">
+              <input type="checkbox" id="danish" name="coffee" value="4.00" onchange="updatePrice()">
+              <label for="espresso">Danish - $4.00</label>
+            </div>
+            <div class="submenu" id="danishMenu">
+              <div>
+                <div class="submenu" id="danishMenu">
+                  <div>
+                    <input type="checkbox" id="raspberryDanish" name="raspberrydanish" value="4.00" data-coffee="raspberry"
+                      onchange="updatePrice()"> <label for="Raspberrydanish">Raspberry</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="chocolateDanish" name="chocolatedanish" value="4.00" data-coffee="chocolate"
+                      onchange="updatePrice()"> <label for="Chocolatedanish">Chocolate</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
     <section>
       <div class="total-price" id="priceOrder">
         <p>Total: <span id="totalPrice">$0.00</span></p>
