@@ -5,7 +5,7 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var coffeeCheckboxes = document.querySelectorAll('.coffee-option input[type="checkbox"]');
+  var coffeeCheckboxes = document.querySelectorAll('.menu-option input[type="checkbox"]');
 
   coffeeCheckboxes.forEach(function (checkbox) {
     checkbox.addEventListener('change', function () {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function updatePrice() {
-  var coffeeOptions = document.querySelectorAll('#coffeeForm input[type=checkbox]');
+  var coffeeOptions = document.querySelectorAll('#menuForm input[type=checkbox]');
   var total = 0;
 
   coffeeOptions.forEach(function (option) {
@@ -40,7 +40,7 @@ function updatePrice() {
 }
 
 document.getElementById('submitOrder').addEventListener('click', function () {
-  const coffeeOptions = document.querySelectorAll('.coffee-option input[type="checkbox"]:checked');
+  const coffeeOptions = document.querySelectorAll('.menu-option input[type="checkbox"]:checked');
 
   if (coffeeOptions.length === 0) {
     alert('Please select at least one coffee option before submitting your order.');

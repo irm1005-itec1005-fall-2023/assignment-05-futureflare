@@ -46,20 +46,20 @@
     <div class="hero-content">
       <h1>Welcome to Coffee Heaven</h1>
       <p>Discover Your Perfect Cup</p>
-      <a href="#coffeeForm" class="hero-button">Customize Your Coffee</a>
+      <a href="#coffeeSection" class="hero-button">Customize Your Coffee</a>
     </div>
   </section>
 
   <main>
-    <section class="coffee-selection">
-      <h2>Customize Your Coffee</h2>
-      <form id="coffeeForm">
-        <div class="coffee-choice" id="espressoChoice">
+    <section class="menu-selection">
+      <h2 id="coffeeSection">Customize Your Coffee</h2>
+      <form id="menuForm">
+        <div class="menu-choice" id="espressoChoice">
           <div>
-            <img class="coffee-img" id="espresso-img" src="./images/espressocoffe2.jpg" alt="image of espresso shot">
+            <img class="menu-item-img" id="espresso-img" src="./images/espressocoffe2.jpg" alt="image of espresso shot">
           </div>
-          <div class="coffee-option">
-            <div class="coffee-title">
+          <div class="menu-option">
+            <div class="menu-title">
               <input type="checkbox" id="espresso" name="coffee" value="2.00" onchange="updatePrice()">
               <label for="espresso">Espresso - $2.00</label>
             </div>
@@ -76,12 +76,12 @@
           </div>
         </div>
 
-        <div class="coffee-choice" id="latteChoice">
+        <div class="menu-choice" id="latteChoice">
           <div>
-            <img class="coffee-img" src="./images/lattecoffee.jpg" alt="Cup of Latte">
+            <img class="menu-item-img" src="./images/lattecoffee.jpg" alt="Cup of Latte">
           </div>
-          <div class="coffee-option">
-            <div class="coffee-title">
+          <div class="menu-option">
+            <div class="menu-title">
               <input type="checkbox" id="latte" name="coffee" value="3.50" onchange="updatePrice()">
               <label for="latte">Latte - $3.50</label>
             </div>
@@ -100,12 +100,12 @@
           </div>
         </div>
 
-        <div class="coffee-choice" id="americanoChoice">
+        <div class="menu-choice" id="americanoChoice">
           <div>
-            <img class="coffee-img" src="./images/americano.jpg" alt="Cup of Americano">
+            <img class="menu-item-img" src="./images/americano.jpg" alt="Cup of Americano">
           </div>
-          <div class="coffee-option">
-            <div class="coffee-title">
+          <div class="menu-option">
+            <div class="menu-title">
               <input type="checkbox" id="americano" name="coffee" value="3.50" onchange="updatePrice()">
               <label for="americano">Americano - $3.50</label>
             </div>
@@ -126,32 +126,31 @@
       </form>
     </section>
 
-    <section class="food-selection">
-      <h2>Food</h2>
-      <form id="danishForm">
-        <div class="danish-choice" id="danishChoice">
+    <section class="menu-selection">
+      <h2>Food and Snacks</h2>
+      <form id="menuForm">
+        <div class="menu-choice" id="danishChoice">
           <div>
-            <img class="food-img" id="danish-img" src="https://static01.nyt.com/images/2015/12/23/dining/23JPDANISH4/23JPDANISH4-articleLarge.jpg" alt="image of 4 danishes">
+            <img class="menu-item-img" id="danish-img" src="images/4danish.jpg" alt="image of 4 danishes">
           </div>
-          <div class="danish-option">
-            <div class="danish-title">
+          <div class="menu-option">
+            <div class="menu-title">
               <input type="checkbox" id="danish" name="coffee" value="4.00" onchange="updatePrice()">
-              <label for="espresso">Danish - $4.00</label>
+              <label for="danish">Danish - $4.00</label>
             </div>
+        
             <div class="submenu" id="danishMenu">
               <div>
-                <div class="submenu" id="danishMenu">
-                  <div>
-                    <input type="checkbox" id="raspberryDanish" name="raspberrydanish" value="4.00" data-coffee="raspberry"
-                      onchange="updatePrice()"> <label for="Raspberrydanish">Raspberry</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="chocolateDanish" name="chocolatedanish" value="4.00" data-coffee="chocolate"
-                      onchange="updatePrice()"> <label for="Chocolatedanish">Chocolate</label>
-                  </div>
-                </div>
+                <input type="checkbox" id="raspberryDanish" name="raspberry" value="4.00" data-coffee="raspberry"
+                  onchange="updatePrice()"> <label for="raspberryDanish">Raspberry</label>
+              </div>
+              <div>
+                <input type="checkbox" id="chocolateDanish" name="chocolate" value="4.00" data-coffee="chocolate" onchange="updatePrice()"> <label for="chocolateDanish">Chocolate</label>
               </div>
             </div>
+          </div>
+        </div>
+      </form>
 
     <section>
       <div class="total-price" id="priceOrder">
