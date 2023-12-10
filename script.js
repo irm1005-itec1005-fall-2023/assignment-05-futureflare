@@ -19,20 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function updatePrice() {
-  var coffeeOptions = document.querySelectorAll('#menuForm input[type=checkbox]');
   var total = 0;
+  var coffeeOptions = document.querySelectorAll('#menuForm input[type=checkbox], #menuForm2 input[type=checkbox]');
 
   coffeeOptions.forEach(function (option) {
     if (option.checked) {
       if (option.dataset.coffee) {
         var relatedCoffee = document.getElementById(option.dataset.coffee);
-        if (!relatedCoffee.checked) {
-          alert('Please select the related coffee option before choosing addons.');
-          option.checked = false;
-          return;
+        if (relatedCoffee && relatedCoffee.checked) {
+          total += parseFloat(option.value);
         }
+      } else {
+        total += parseFloat(option.value);
       }
-      total += parseFloat(option.value);
     }
   });
 

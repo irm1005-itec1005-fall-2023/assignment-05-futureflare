@@ -88,6 +88,16 @@ body {
   margin-top: 10px;
 }
 
+#menuForm2 {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 10px;
+}
+
 #espressoChoice {
   grid-column: 1;
   grid-row: 2;
