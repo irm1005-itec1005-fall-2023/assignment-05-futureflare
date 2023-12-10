@@ -46,20 +46,20 @@
     <div class="hero-content">
       <h1>Welcome to Coffee Heaven</h1>
       <p>Discover Your Perfect Cup</p>
-      <a href="#coffeeForm" class="hero-button">Customize Your Coffee</a>
+      <a href="#coffeeSection" class="hero-button">Customize Your Coffee</a>
     </div>
   </section>
 
   <main>
-    <section class="coffee-selection">
-      <h2>Customize Your Coffee</h2>
-      <form id="coffeeForm">
-        <div class="coffee-choice" id="espressoChoice">
+    <section class="menu-selection">
+      <h2 id="coffeeSection">Customize Your Coffee</h2>
+      <form id="menuForm">
+        <div class="menu-choice" id="espressoChoice">
           <div>
-            <img class="coffee-img" id="espresso-img" src="./images/espressocoffe2.jpg" alt="image of espresso shot">
+            <img class="menu-item-img" id="espresso-img" src="./images/espressocoffe2.jpg" alt="image of espresso shot">
           </div>
-          <div class="coffee-option">
-            <div class="coffee-title">
+          <div class="menu-option">
+            <div class="menu-title">
               <input type="checkbox" id="espresso" name="coffee" value="2.00" onchange="updatePrice()">
               <label for="espresso">Espresso - $2.00</label>
             </div>
@@ -76,12 +76,12 @@
           </div>
         </div>
 
-        <div class="coffee-choice" id="latteChoice">
+        <div class="menu-choice" id="latteChoice">
           <div>
-            <img class="coffee-img" src="./images/lattecoffee.jpg" alt="Cup of Latte">
+            <img class="menu-item-img" src="./images/lattecoffee.jpg" alt="Cup of Latte">
           </div>
-          <div class="coffee-option">
-            <div class="coffee-title">
+          <div class="menu-option">
+            <div class="menu-title">
               <input type="checkbox" id="latte" name="coffee" value="3.50" onchange="updatePrice()">
               <label for="latte">Latte - $3.50</label>
             </div>
@@ -100,12 +100,12 @@
           </div>
         </div>
 
-        <div class="coffee-choice" id="americanoChoice">
+        <div class="menu-choice" id="americanoChoice">
           <div>
-            <img class="coffee-img" src="./images/americano.jpg" alt="Cup of Americano">
+            <img class="menu-item-img" src="./images/americano.jpg" alt="Cup of Americano">
           </div>
-          <div class="coffee-option">
-            <div class="coffee-title">
+          <div class="menu-option">
+            <div class="menu-title">
               <input type="checkbox" id="americano" name="coffee" value="3.50" onchange="updatePrice()">
               <label for="americano">Americano - $3.50</label>
             </div>
@@ -126,6 +126,32 @@
       </form>
     </section>
 
+    <section class="menu-selection">
+      <h2>Food and Snacks</h2>
+      <form id="menuForm">
+        <div class="menu-choice" id="danishChoice">
+          <div>
+            <img class="menu-item-img" id="danish-img" src="images/4danish.jpg" alt="image of 4 danishes">
+          </div>
+          <div class="menu-option">
+            <div class="menu-title">
+              <input type="checkbox" id="danish" name="coffee" value="4.00" onchange="updatePrice()">
+              <label for="danish">Danish - $4.00</label>
+            </div>
+        
+            <div class="submenu" id="danishMenu">
+              <div>
+                <input type="checkbox" id="raspberryDanish" name="raspberry" value="4.00" data-coffee="raspberry"
+                  onchange="updatePrice()"> <label for="raspberryDanish">Raspberry</label>
+              </div>
+              <div>
+                <input type="checkbox" id="chocolateDanish" name="chocolate" value="4.00" data-coffee="chocolate" onchange="updatePrice()"> <label for="chocolateDanish">Chocolate</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
     <section>
       <div class="total-price" id="priceOrder">
         <p>Total: <span id="totalPrice">$0.00</span></p>
@@ -137,6 +163,30 @@
       <h2>Order Details</h2>
       <p id="orderMessage"></p>
     </section>
+
+    <section class="shop-story">
+      <div class="shop-story-content">
+        <h3>Our Story</h3>
+        <p>At Coffee Heaven, our story began with a shared love for exceptional coffee and a dream of creating a cozy, welcoming space for our community.
+          From carefully sourced beans to skilled baristas, Coffee Heaven is a labor of love, where each cup tells a tale of craftsmanship and connection.
+          Join us in savoring not just coffee, but the moments that make life rich and vibrant.</p>
+      </div>
+    </section>
+
+  <section>
+      <div class="customer-reviews-title">
+          <h3>Customer Reviews</h3>
+      </div>
+      <div class="customer-reviews">
+          <p>"I've searched high and low for the perfect espresso, and I found it at Coffee Heaven. The richness and depth of flavor are unmatched"</p>
+      </div>
+      <div class="customer-reviews">
+          <p>"Aside from their fantastic coffee, Coffee Heaven offers the most delicious pastries and treats!"</p>
+      </div>
+      <div class="customer-reviews">
+            <p>"Whether it's a classic drip or a specialty blend, they nail it every time. Highly recommended!"</p>
+  </section>
+
   </main>
 
   <footer>

@@ -71,14 +71,14 @@ body {
   background-color: #543930;
 }
 
-.coffee-selection {
+.menu-selection {
   display: flex;
   width: 85%;
   flex-direction: column;
   margin: 20px auto;
 }
 
-#coffeeForm {
+#menuForm {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
@@ -111,7 +111,7 @@ body {
   align-self: start;
 }
 
-.coffee-choice {
+.menu-choice {
   padding: 0px;
   margin-bottom: 15px;
   border-radius: 5px;
@@ -119,11 +119,11 @@ body {
   transition: transform 0.3s ease;
 }
 
-.coffee-choice:hover {
+.menu-choice:hover {
   transform: scale(1.03);
 }
 
-.coffee-img {
+.menu-item-img {
   object-fit: cover;
   margin-bottom: 0px;
   border-radius: 10px;
@@ -131,7 +131,7 @@ body {
   border-bottom-right-radius: 0px;
 }
 
-.coffee-option {
+.menu-option {
   background-color: #ffffffcd;
   padding: 10px;
   margin-bottom: 10px;
@@ -142,12 +142,6 @@ body {
   position: relative;
   transition: transform 0.3s ease;
 }
-
-/*
-.coffee-option:hover {
-  transform: scale(1.03);
-}
-*/
 
 .submenu {
   display: none;
@@ -221,6 +215,42 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 80%;
 }
+
+.shop-story {
+  background-color: #543930;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  opacity: 0.8;
+ }
+ 
+ .customer-reviews-title {
+    background-color: #543930;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    opacity: 0.8;
+ }
+ 
+ .customer-reviews {
+  background-color: #543930;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    opacity: 0.8;
+ }
 
 footer {
   background-color: #333;
